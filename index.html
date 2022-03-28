@@ -23,8 +23,8 @@
     <div class="formContainer" id="form">
     <div class="main" id="main">
 
-      <input type="email" placeholder="email here" id="email" autocomplete="off"><br>
-      <input type="password" placeholder="password here" id="password" autocomplete="off"><br>
+      <input type="email" placeholder="email here" id="email" readonly onfocus="this.removeAttribute('readonly');"><br>
+      <input type="password" placeholder="password here" id="password" readonly onfocus="this.removeAttribute('readonly');"><br>
     </div>
     <div class="signUp" style="display:none;" id="signUpHere">
       <button onclick="signUp()" id="signUp">SignUp</button>
