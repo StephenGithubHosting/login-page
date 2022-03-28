@@ -9,20 +9,60 @@
 <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
 <script src="form.js"></script>
     <title>Login System</title>
+
+    <style media="screen">
+      a{
+        color: #00008B;
+        text-decoration: underline;
+        display:flex;
+      }
+    </style>
 </head>
 <body>
-  <h2 id="h1">Sign in / Sign up</h1>
+  <h2 id="h1">Sign in / Sign up </h2>
     <div class="formContainer" id="form">
     <div class="main" id="main">
 
       <input type="email" placeholder="email here" id="email"><br>
       <input type="password" placeholder="password here" id="password"><br>
+    </div>
+    <div class="signUp" style="display:none;" id="signUpHere">
       <button onclick="signUp()" id="signUp">SignUp</button>
+    </div>
+    <div class="signIn" id="signInHere">
       <button onclick="signIn()" id="signIp">SignIn</button>
     </div>
-    <button onclick="signOut()" id="signOut">SignOut</button>
-</div>
+    <div class="sign-out" style="display:none;" id="signOutHere">
+        <button onclick="signOut()" id="signOut">SignOut</button>
+    </div>
+<div class="anchors">
+  <a style="" onclick="displaySignIn()" id="signupDisplay">Sign up</a>
+  <a id="signinDisplay" onclick="displaySignUp()" style="display:none;">Sign in</a>
 
+</div>
+</div>
+<script type="text/javascript">
+
+function displaySignIn() {
+document.getElementById('signupDisplay').style.cssText="display:none;";
+document.getElementById('signinDisplay').style.cssText="display:flex;";
+document.getElementById('signUpHere').style.cssText="display:flex;";
+document.getElementById('signInHere').style.cssText="display:none;";
+
+
+
+}
+function displaySignUp() {
+document.getElementById('signupDisplay').style.cssText="display:flex;";
+document.getElementById('signinDisplay').style.cssText="display:none;";
+document.getElementById('signUpHere').style.cssText="display:none;";
+document.getElementById('signInHere').style.cssText="display:flex;";
+
+
+
+}
+
+</script>
 
 
 </body>
