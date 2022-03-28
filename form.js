@@ -53,9 +53,15 @@
       form.style.cssText="display:none;"
       var h1 = document.getElementById("h1");
       h1.innerHTML= "Hello: " + email;
+      document.getElementById("signOutHere").style.display="flex";
+      document.getElementById('signUpHere').style.cssText="display:none;";
+      document.getElementById('signInHere').style.cssText="display:none;";
+      document.getElementById('signupDisplay').style.cssText="display:none;";
+      document.getElementById('signinDisplay').style.cssText="display:none;";
 
 
     }else{
       console.log("No Active user Found");
+
     }
   })
